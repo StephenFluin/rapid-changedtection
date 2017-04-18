@@ -1,0 +1,23 @@
+<div>
+	<button md-button
+			(click)="addPairs(100)"
+			color="primary">Add 100 Tiles
+	</button>
+	<button md-button
+			(click)="clearAll()"
+			color="primary">Clear
+	</button>
+	<button *ngFor="let currencyPair of currencyPairs"
+			md-button
+			(click)="addPair(currencyPair)"
+			color="primary">
+		{{ currencyPair }}
+	</button>
+	<div><input type="checkbox" [(ngModel)]="isWorker">Is Worker</div>
+	<label> || Tiles : {{ state.selectedPairs.length }}</label>
+
+	<div class="container">
+		<self-tile *ngFor="let selectedPair of state.selectedPairs ;trackBy:tileIdTrackFn"
+				   [model]="selectedPair"></self-tile>
+	</div>
+</div>

@@ -3,9 +3,14 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import {blacklistZone} from './app/blacklist'
 
-if (environment.production) {
+
+if (environment.production || true) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+
+blacklistZone.run(() => {
+  platformBrowserDynamic().bootstrapModule(AppModule);
+});

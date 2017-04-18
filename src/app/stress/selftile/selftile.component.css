@@ -1,0 +1,39 @@
+md-card {
+	text-align: center;
+	border-radius: 15px;
+	max-width: 150px;
+	margin: 10px;
+	padding: 5px 15px;
+	min-height: 83px;
+	min-width: 142px;
+}
+
+md-card .tile-sell{
+	background-color: #FFCDD2;
+}
+
+md-card .tile-buy{
+	background-color: rgb(220,237,200);
+}
+
+md-card-title {
+	margin: 5px;
+	font-size: 18px;
+}
+
+md-card-subtitle {
+	margin: 5px;
+	font-size: 14px;
+}
+
+.top-row, .middle-row, .bottom-row {
+	padding: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+md-card-title-group .bottom-row {
+	flex-direction: row;
+}

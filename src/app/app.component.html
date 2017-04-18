@@ -1,3 +1,32 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+	<!--<i class="fa fa-spin fa-cog fa-fw"></i>-->
+	<span>Marquee Trader Angular Demo</span>
+	<!--<nav>
+		<button md-button
+				color=""
+				[routerLink]=" ['./stress'] ">
+				Empty
+		</button>
+		
+		|
+		<button md-button
+				color=""
+				[routerLink]="['./stress'] "
+				[queryParams]="{initialQuantity: 100}">
+			Loaded
+		</button>
+		|
+		<button md-button
+				color=""
+				[routerLink]=" ['./about'] ">
+			About
+		</button>
+		
+	</nav>-->
+</md-toolbar>
+
+<br>
+
+<main>
+	<router-outlet></router-outlet>
+</main>

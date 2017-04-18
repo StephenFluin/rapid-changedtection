@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+
+import { AppState } from './app.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: 'app-root',
+	templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'app works!';
+	constructor(public appState: AppState) {
+
+	}
+
+	ngOnInit() {
+		console.log('Initial App State', this.appState.state);
+	}
+
 }
